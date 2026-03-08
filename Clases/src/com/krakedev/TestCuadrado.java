@@ -7,9 +7,9 @@ public class TestCuadrado {
 		Cuadrado c2=new Cuadrado();
 		Cuadrado c3=new Cuadrado();
 		
-		c1.lado=13;
-		c2.lado=25.63;
-		c3.lado=128.6;
+		c1.setLado(13);
+		c2.setLado(25.63);
+		c3.setLado(128.6);
 		
 		double areaC1=c1.calcularArea();
 		double areaC2=c2.calcularArea();

@@ -3,7 +3,7 @@ package com.krakedev;
 import java.lang.Math;
 
 public class Cuadrado {
-	public double lado;
+	private double lado;
 	
 	public double calcularArea() {
 		double area=Math.pow(lado, 2);
@@ -13,4 +13,12 @@ public class Cuadrado {
 		double perimetro=lado*4;
 		return perimetro;
 	}
+	public double getLado() {
+		return lado;
+	}
+	public void setLado(double lado) {
+		this.lado = lado;
+	}
+	
+	
 }
