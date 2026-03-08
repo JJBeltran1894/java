@@ -4,9 +4,9 @@ public class TestProducto {
 
 	public static void main(String[] args) {
 		// 1. y 2. Crear 3 variables e instanciar los objetos
-		Producto productoA=new Producto();
-		Producto productoB=new Producto();
-		Producto productoC=new Producto();
+		Producto productoA=new Producto(" "," ",0,0);
+		Producto productoB=new Producto(" "," ",0,0);
+		Producto productoC=new Producto(" "," ",0,0);
 		
 		// 2. Modificar los atributos de cada producto (tipo farmacia)
 		// A
