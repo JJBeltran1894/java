@@ -17,5 +17,10 @@ public class Calculadora {
 		resultado=valor1*valor2;
 		return resultado;
 	}
+	public int dividir(int valor1, int valor2) {
+		int resultado;
+		resultado=valor1/valor2;
+		return resultado;
+	}
 
 }
