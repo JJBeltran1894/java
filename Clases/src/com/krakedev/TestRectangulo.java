@@ -16,6 +16,12 @@ public class TestRectangulo {
 		
 		System.out.println("Area de R1: "+areaR1);
 		System.out.println("Area de R2: "+areaR2);
+		
+		double perimetroR1=r1.calcularPerimetro();
+		double perimetroR2=r2.calcularPerimetro();
+		
+		System.out.println("Perimetro de R1: "+perimetroR1);
+		System.out.println("Perimetro de R2: "+perimetroR2);
 
 	}
 
