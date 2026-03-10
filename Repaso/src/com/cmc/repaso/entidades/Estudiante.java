@@ -17,4 +17,10 @@ public class Estudiante {
 			this.resultado="A";
 		}
 	}
+
+	public String getResultado() {
+		return resultado;
+	}
+
+	
 }
