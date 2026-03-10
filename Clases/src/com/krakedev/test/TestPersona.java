@@ -1,4 +1,6 @@
-package com.krakedev;
+package com.krakedev.test;
+
+import com.krakedev.Persona;
 
 public class TestPersona {
 
@@ -38,6 +40,7 @@ public class TestPersona {
 		System.out.println("p.nombre: "+p.getNombre());
 		System.out.println("p2.nombre: "+p2.getNombre());
 		
+		p3.setNombre("Angel");
 		
 	}
 

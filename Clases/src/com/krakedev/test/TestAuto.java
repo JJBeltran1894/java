@@ -1,11 +1,13 @@
-package com.krakedev;
+package com.krakedev.test;
+
+import com.krakedev.Auto;
 
 public class TestAuto {
 
 	public static void main(String[] args) {
 		// 1. Instanciar dos autos (auto1 y auto2)
-		Auto auto1=new Auto(" ",0,0);
-		Auto auto2=new Auto(" ",0,0);
+		Auto auto1=new Auto(" ",0,0.0);
+		Auto auto2=new Auto(" ",0,0.0);
 		// 2. Modificar los atrbutos
 		auto1.setMarca("Audi");
 		auto1.setAnio(2023);
