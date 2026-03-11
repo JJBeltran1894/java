@@ -7,18 +7,18 @@ public class Producto {
 	
 	
 	
-	public Producto(String nombre, double precio, String codigo) {
+	public Producto(String codigo, String nombre, double precio) {
 		this.nombre = nombre;
 		this.precio = precio;
 		this.codigo = codigo;
 	}
 
 	public void incrementarPrecio(int porcentaje) {
-		this.precio+=(this.precio*porcentaje);
+		this.precio+=(this.precio*(porcentaje/100.0));
 	}
 	
-	public void disminuirPrecio(int porcentaje) {
-		this.precio-=(this.precio*porcentaje);
+	public void disminuirPrecio(double valor) {
+		this.precio-=valor;
 	}
 
 	public String getNombre() {
