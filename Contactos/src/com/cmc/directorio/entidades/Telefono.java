@@ -37,7 +37,7 @@ public class Telefono {
 		this.codigo = codigo;
 	}
 
-	public boolean isTieneWhatsapp() {
+	public boolean getTieneWhatsapp() {
 		return tieneWhatsapp;
 	}
 
