@@ -103,13 +103,13 @@ public class MaquinaDulces {
 		return celda.getProducto().getPrecio();
 	}
 	public Celda buscarCeldaProducto(String codProducto) {
-		if(celda1.getProducto().getCodigo()==codProducto) {
+		if(celda1.getProducto()!=null && celda1.getProducto().getCodigo()==codProducto) {
 			return celda1;
-		}else if(celda2.getProducto().getCodigo()==codProducto) {
+		}else if(celda2.getProducto()!=null && celda2.getProducto().getCodigo()==codProducto) {
 			return celda2;
-		}else if(celda3.getProducto().getCodigo()==codProducto) {
+		}else if(celda3.getProducto()!=null && celda3.getProducto().getCodigo()==codProducto) {
 			return celda3;
-		}else if(celda4.getProducto().getCodigo()==codProducto) {
+		}else if(celda4.getProducto()!=null && celda4.getProducto().getCodigo()==codProducto) {
 			return celda4;
 		}else {
 			return null;
@@ -117,7 +117,7 @@ public class MaquinaDulces {
 	}
 	public void incrementarProductos(String codProducto,int cantidad) {
 		Celda celdaEncontrada=this.buscarCeldaProducto(codProducto);
-		celdaEncontrada.setStock(cantidad);
+		celdaEncontrada.setStock(celdaEncontrada.getStock()+cantidad);
 	}
 	public void vender(String codCelda) {
 		Celda celdaEncontrada=this.buscarCelda(codCelda);
