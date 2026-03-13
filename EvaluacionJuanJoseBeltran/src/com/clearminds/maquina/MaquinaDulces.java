@@ -51,11 +51,15 @@ public class MaquinaDulces {
 			}else{
 				System.out.println("  ----Producto: "+celdas.get(i).getProducto().getNombre());
 				System.out.println("  ----Precio: "+celdas.get(i).getProducto().getPrecio());
-				//System.out.println("  ----Código: "+celdas.get(i).getProducto().getCodigo());
+				System.out.println("  ----Código: "+celdas.get(i).getProducto().getCodigo());
 			}
 		}
 		//System.out.println("-------------------------");
 		//System.out.println("  >SALDO: $"+saldo);
 		//System.out.println("--------- FIN ----------");
+	}
+	public Producto buscarProductoEnCelda(String codCelda) {
+		Celda celda=this.buscarCelda(codCelda);
+		return celda.getProducto();
 	}
 }
