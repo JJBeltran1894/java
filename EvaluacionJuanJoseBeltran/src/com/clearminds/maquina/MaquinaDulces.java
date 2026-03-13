@@ -82,4 +82,8 @@ public class MaquinaDulces {
 		}
 		return celdaEncontrada;
 	}
+	public void incrementarProductos(String codProducto,int cantidad) {
+		Celda celdaEncontrada=this.buscarCeldaProducto(codProducto);
+		celdaEncontrada.setStock(celdaEncontrada.getStock()+cantidad);
+	}
 }
