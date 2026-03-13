@@ -54,9 +54,9 @@ public class MaquinaDulces {
 				System.out.println("  ----Código: "+celdas.get(i).getProducto().getCodigo());
 			}
 		}
-		//System.out.println("-------------------------");
-		//System.out.println("  >SALDO: $"+saldo);
-		//System.out.println("--------- FIN ----------");
+		System.out.println("-------------------------");
+		System.out.println("  >SALDO: $"+saldo);
+		System.out.println("--------- FIN ----------");
 	}
 	public Producto buscarProductoEnCelda(String codCelda) {
 		Celda celda=this.buscarCelda(codCelda);
@@ -85,5 +85,10 @@ public class MaquinaDulces {
 	public void incrementarProductos(String codProducto,int cantidad) {
 		Celda celdaEncontrada=this.buscarCeldaProducto(codProducto);
 		celdaEncontrada.setStock(celdaEncontrada.getStock()+cantidad);
+	}
+	public void vender(String codCelda) {
+		Celda celdaEncontrada=this.buscarCelda(codCelda);
+		celdaEncontrada.setStock(celdaEncontrada.getStock()-1);
+		this.saldo+=this.consultarPrecio(codCelda);
 	}
 }
