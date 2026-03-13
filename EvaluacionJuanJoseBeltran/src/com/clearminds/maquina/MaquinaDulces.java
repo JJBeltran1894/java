@@ -60,6 +60,15 @@ public class MaquinaDulces {
 	}
 	public Producto buscarProductoEnCelda(String codCelda) {
 		Celda celda=this.buscarCelda(codCelda);
-		return celda.getProducto();
+		if(celda!=null) {
+			return celda.getProducto();
+		}else {
+			return null;
+		}
+	
+	}
+	public double consultarPrecio(String codCelda) {
+		Celda celda=this.buscarCelda(codCelda);
+		return celda.getProducto().getPrecio();
 	}
 }
