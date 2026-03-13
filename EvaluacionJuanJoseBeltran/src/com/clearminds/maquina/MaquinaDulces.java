@@ -3,6 +3,7 @@ package com.clearminds.maquina;
 import java.util.ArrayList;
 
 import com.clearminds.componentes.Celda;
+import com.clearminds.componentes.Producto;
 
 public class MaquinaDulces {
 	private ArrayList<Celda> celdas;
@@ -33,5 +34,28 @@ public class MaquinaDulces {
 			}
 		}
 		return celdaEncontrada;
+	}
+	public void cargarProducto(Producto prod,String codCelda,int cant) {
+		Celda celdaRecuperada=this.buscarCelda(codCelda);
+		celdaRecuperada.setProducto(prod);
+		celdaRecuperada.setStock(cant);
+	}
+	public void mostrarProductos() {
+		System.out.println("**Productos por Celda**");
+		System.out.println("-------------------------");
+		for(int i=0;i<celdas.size();i++) {
+			System.out.println("  >Celda "+(i+1)+": "+celdas.get(i).getCodigo());
+			System.out.println("  ----Stock Actual: "+celdas.get(i).getStock());
+			if(celdas.get(i).getProducto()==null) {
+				System.out.println("  ---- La Celda no tiene Producto!");
+			}else{
+				System.out.println("  ----Producto: "+celdas.get(i).getProducto().getNombre());
+				System.out.println("  ----Precio: "+celdas.get(i).getProducto().getPrecio());
+				//System.out.println("  ----Código: "+celdas.get(i).getProducto().getCodigo());
+			}
+		}
+		//System.out.println("-------------------------");
+		//System.out.println("  >SALDO: $"+saldo);
+		//System.out.println("--------- FIN ----------");
 	}
 }
