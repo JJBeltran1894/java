@@ -91,4 +91,11 @@ public class MaquinaDulces {
 		celdaEncontrada.setStock(celdaEncontrada.getStock()-1);
 		this.saldo+=this.consultarPrecio(codCelda);
 	}
+	public double venderConCambio(String codCelda,double valor) {
+		this.vender(codCelda);
+		double precio=this.consultarPrecio(codCelda);
+		double cambio=valor-precio;
+		return cambio;
+	}
+	
 }
