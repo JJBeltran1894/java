@@ -93,6 +93,18 @@ public class Contacto {
 		}
 		System.out.println(texto);
 	}
-	
+	public ArrayList<Telefono> recuperarIncorrectos(){
+		ArrayList<Telefono> telefonosIncorrectos=new ArrayList<Telefono>();
+		if(telefonos==null) {
+			System.out.println("Contacto no tiene telefonos registrados");
+		}else {
+			for(int i=0;i<telefonos.size();i++) {
+				if(telefonos.get(i).getEstado().equals("E")) {
+					telefonosIncorrectos.add(telefonos.get(i));
+				}
+			}
+		}
+		return telefonosIncorrectos;
+	}
 	
 }
