@@ -70,4 +70,17 @@ public class Directorio {
 		String ultimaModificacion=fechaConFormato.format(fechaModificacion);
 		return ultimaModificacion;
 	}
+	public int contarPerdidos() {
+		int perdidos=0;
+		if(contactos.size()==0) {
+			System.out.println("Direcctorio Vacio");
+		}else {
+			for(int i=0;i<contactos.size();i++) {
+				if(contactos.get(i).getDireccion()==null) {
+					perdidos+=1;
+				}
+			}
+		}
+		return perdidos;
+	}
 }
