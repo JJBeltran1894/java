@@ -8,11 +8,28 @@ import java.util.Date;
 public class Directorio {
 	private ArrayList<Contacto> contactos;
 	private Date fechaModificacion;
+	private ArrayList<Contacto> correctos;
+	private ArrayList<Contacto> incorrectos;
 
 	public Directorio() {
 		this.contactos = new ArrayList<Contacto>();
 	}
 	
+	
+	public ArrayList<Contacto> getContactos() {
+		return contactos;
+	}
+
+
+	public ArrayList<Contacto> getIncorrectos() {
+		return incorrectos;
+	}
+
+
+	public ArrayList<Contacto> getCorrectos() {
+		return correctos;
+	}
+
 	public boolean agregarContacto1(Contacto contacto) {
 		boolean valido=true;
 		if(contactos.size()==0) {
@@ -102,5 +119,21 @@ public class Directorio {
 			}
 		}
 		return fijos;
+	}
+	public void depurar() {
+		if(contactos.size()==0) {
+			System.out.println("Direcctorio Vacio");
+		}else {
+			correctos = new ArrayList<Contacto>();
+			incorrectos = new ArrayList<Contacto>();
+			for(int i=0;i<contactos.size();i++) {
+				if(contactos.get(i).getDireccion()==null) {
+					incorrectos.add(contactos.get(i));
+				}else {
+					correctos.add(contactos.get(i));
+				}
+			}
+		}
+		contactos.clear();
 	}
 }
