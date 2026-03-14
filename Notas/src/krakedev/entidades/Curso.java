@@ -50,7 +50,7 @@ public class Curso {
 		return promedio;
 	}
 	public void mostrar() {
-		System.out.println("Curso [estudiantes= ");
+		System.out.println("Curso [estudiantes=[");
 		for(int i=0;i<estudiantes.size();i++) {
 			estudiantes.get(i).mostrar();
 		}

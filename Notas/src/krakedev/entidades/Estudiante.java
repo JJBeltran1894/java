@@ -98,7 +98,7 @@ public class Estudiante {
 	}
 	public void mostrar() {
 		//String mensaje="Estudiante [nombre= "+nombre+", apellido= "+apellido+", cedula= "+cedula+", notas= ";
-		System.out.println("Estudiante [nombre= "+nombre+", apellido= "+apellido+", cedula= "+cedula+", notas= ");
+		System.out.println("Estudiante [nombre= "+nombre+", apellido= "+apellido+", cedula= "+cedula+", notas=[");
 		for(int i=0;i<notas.size();i++) {
 			//mensaje+="\n\t> materia= "+notas.get(i).getMateria().getNombre()+"\\n\\t> calificacion= "+notas.get(i).getCalificacion();
 			notas.get(i).mostrar();
