@@ -4,6 +4,11 @@ public class Numero {
 	private String numeroCarta;
 	private int valor;
 	
+	public Numero(String numeroCarta, int valor) {
+		super();
+		this.numeroCarta = numeroCarta;
+		this.valor = valor;
+	}
 	public String getNumeroCarta() {
 		return numeroCarta;
 	}

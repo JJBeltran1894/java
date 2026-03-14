@@ -7,6 +7,9 @@ public class Carta {
 		this.numero = numero;
 		this.palo = palo;
 	}
+	public Carta() {
+
+	}
 	public Numero getNumero() {
 		return numero;
 	}
