@@ -49,6 +49,11 @@ public class Contacto {
 	public void setDireccion(Direccion direccion) {
 		this.direccion = direccion;
 	}
+	
+	public ArrayList<Telefono> getTelefonos() {
+		return telefonos;
+	}
+
 	public void imprimir() {
 		System.out.println("Informacion del Contacto:\nCédula: "+cedula+"\nNombre: "+nombre+"\nApellido: "+apellido+"\nDirección:\n  Calle Principal: "+direccion.getCallePrincipal()+"\n  Calle Secundaria: "+direccion.getCalleSecundaria());
 		
