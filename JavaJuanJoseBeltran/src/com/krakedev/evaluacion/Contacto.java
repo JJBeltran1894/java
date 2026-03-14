@@ -1,16 +1,21 @@
 package com.krakedev.evaluacion;
 
+import java.util.ArrayList;
+
 public class Contacto {
 	private String cedula;
 	private String nombre;
 	private String apellido;
 	private Direccion direccion;
+	private ArrayList<Telefono> telefonos;
 	
 	public Contacto(String cedula, String nombre, String apellido) {
 
 		this.cedula = cedula;
 		this.nombre = nombre;
 		this.apellido = apellido;
+		telefonos=new ArrayList<Telefono>();
+		
 	}
 
 	public String getCedula() {
@@ -54,6 +59,37 @@ public class Contacto {
 			texto+="Dirección: "+direccion.getCallePrincipal()+" y "+direccion.getCalleSecundaria();
 		}else {
 			texto+="No tiene asociada una dirección";
+		}
+		System.out.println(texto);
+	}
+	public void agregarTelefono(Telefono telefono) {
+		boolean error=false;
+		if(telefonos.size()==0) {
+			telefonos.add(telefono);
+		}else {
+			for(int i=0;i<telefonos.size();i++) {
+				if(telefonos.get(i).getNumero().equals(telefono.getNumero())) {
+					error=true;
+					System.out.println("Telefono Duplicado");
+					break;
+				}
+			}	
+			if(error==false) {
+				telefonos.add(telefono);
+			}
+			
+		}
+	}
+	public void mostrarTelefonos() {
+		String texto="Teléfonos con estado 'C':";
+		if(telefonos==null) {
+			texto="Contacto no tiene telefonos registrados";
+		}else {
+			for(int i=0;i<telefonos.size();i++) {
+				if(telefonos.get(i).getEstado().equals("C")) {
+					texto+="\nNúmero: "+telefonos.get(i).getNumero()+", Tipo: "+telefonos.get(i).getTipo();
+				}
+			}
 		}
 		System.out.println(texto);
 	}
