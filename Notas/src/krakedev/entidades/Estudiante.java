@@ -46,6 +46,7 @@ public class Estudiante {
 		if(nota.getCalificacion()>=0 && nota.getCalificacion()<=10){
 			if (notas.size()==0) {
 				notas.add(nota);
+				System.out.println("Nota ingresada correctamente: "+nota.getMateria().getNombre()+" calificacion: "+nota.getCalificacion());
 			}else {
 				
 				for(int i=0;i<notas.size();i++) {
