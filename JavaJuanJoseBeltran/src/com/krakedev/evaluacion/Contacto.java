@@ -49,11 +49,11 @@ public class Contacto {
 	public void setDireccion(Direccion direccion) {
 		this.direccion = direccion;
 	}
-	public void imprimir1() {
-		System.out.println("Cédula: "+cedula+"\nNombre: "+nombre+"\nApellido: "+apellido+"\nDirección:\n  Calle Principal: "+direccion.getCallePrincipal()+"\n  Calle Secundaria: "+direccion.getCalleSecundaria());
+	public void imprimir() {
+		System.out.println("Informacion del Contacto:\nCédula: "+cedula+"\nNombre: "+nombre+"\nApellido: "+apellido+"\nDirección:\n  Calle Principal: "+direccion.getCallePrincipal()+"\n  Calle Secundaria: "+direccion.getCalleSecundaria());
 		
 	}
-	public void imprimir() {
+	public void imprimir1() {
 		String texto="***"+nombre+" "+apellido+"***\n";
 		if(direccion!=null) {
 			texto+="Dirección: "+direccion.getCallePrincipal()+" y "+direccion.getCalleSecundaria();
