@@ -15,17 +15,12 @@ public class Directorio {
 		this.contactos = new ArrayList<Contacto>();
 	}
 	
-	
 	public ArrayList<Contacto> getContactos() {
 		return contactos;
 	}
-
-
 	public ArrayList<Contacto> getIncorrectos() {
 		return incorrectos;
 	}
-
-
 	public ArrayList<Contacto> getCorrectos() {
 		return correctos;
 	}
