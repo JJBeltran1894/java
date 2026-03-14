@@ -12,7 +12,7 @@ public class Directorio {
 		this.contactos = new ArrayList<Contacto>();
 	}
 	
-	public boolean agregarContacto(Contacto contacto) {
+	public boolean agregarContacto1(Contacto contacto) {
 		boolean valido=true;
 		if(contactos.size()==0) {
 			contactos.add(contacto);
@@ -31,6 +31,22 @@ public class Directorio {
 			
 		}
 		return valido;
+	}
+	public boolean agregarContacto(Contacto contacto) {
+		boolean ingresado=false;
+		Contacto resultado;
+		if(contactos.size()==0) {
+			contactos.add(contacto);
+			ingresado=true;
+		}else {
+			resultado=buscarPorCedula(contacto.getCedula());
+			if(resultado==null) {
+				contactos.add(contacto);
+				ingresado=true;
+			}
+			
+		}
+		return ingresado;
 	}
 	public Contacto buscarPorCedula(String cedula) {
 		Contacto contactoEncontrado=null;
