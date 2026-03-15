@@ -30,6 +30,9 @@ public class Cliente {
 	public void setApellido(String apellido) {
 		this.apellido = apellido;
 	}
+	public void mostrarCliente() {
+		System.out.println("Informacion Cliente:\n  Cedula: "+cedula+"\n  Nombre: "+nombre+" "+apellido);
+	}
 	
 	
 }
