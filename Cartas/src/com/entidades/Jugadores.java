@@ -1,4 +1,4 @@
-package com.servicios;
+package com.entidades;
 
 import java.util.ArrayList;
 
@@ -13,14 +13,7 @@ public class Jugadores {
 		this.jugadores = jugadores;
 	}
 	public void jugar(){
-		jugadores= new ArrayList<String>();
-		jugadores.add("1");
-		jugadores.add("2");
-		jugadores.add("3");
-		Juego juego =new Juego(jugadores);
-		juego.entregarCartas(5);
-		
-		
+		jugadores= new ArrayList<String>();	
 	}
 
 }

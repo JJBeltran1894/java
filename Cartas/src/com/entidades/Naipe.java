@@ -37,18 +37,15 @@ public class Naipe {
 		Numero np13= new Numero("K",10);
 		numerosPosibles.add(np13);
 		
-		Numero n=new Numero("",0);
+		
 		Palos palo=new Palos();
-		Carta c1=new Carta(n,palo.getCorazonNegro());
-		Carta c2=new Carta(n,palo.getCorazonRojo());
-		Carta c3=new Carta(n,palo.getDiamantte());
-		Carta c4=new Carta(n,palo.getTrebol());
+		
 		
 		for(int i=0;i<numerosPosibles.size();i++) {
-			c1.setNumero(numerosPosibles.get(i));
-			c2.setNumero(numerosPosibles.get(i));
-			c3.setNumero(numerosPosibles.get(i));
-			c4.setNumero(numerosPosibles.get(i));
+			Carta c1=new Carta(numerosPosibles.get(i),palo.getCorazonNegro());
+			Carta c2=new Carta(numerosPosibles.get(i),palo.getCorazonRojo());
+			Carta c3=new Carta(numerosPosibles.get(i),palo.getDiamantte());
+			Carta c4=new Carta(numerosPosibles.get(i),palo.getTrebol());
 			cartas.add(c1);
 			cartas.add(c2);
 			cartas.add(c3);
