@@ -11,10 +11,13 @@ public class Juego {
 	private ArrayList<Carta> naipeBarajado;
 	
 	public Juego(ArrayList<String> idsJugadores) {
+		naipe=new Naipe();
+		naipeBarajado=naipe.barajar();
 		ArrayList<Carta> arregloCartas= new ArrayList<Carta>(); 
 		cartasJugadores= new ArrayList<ArrayList<Carta>>();
 		for(int i=0;i<idsJugadores.size();i++) {
 			cartasJugadores.add(arregloCartas);
+			
 		}
 	}
 	public Juego() {
