@@ -15,6 +15,10 @@ public class Cuota {
 	public Cuota(int numero) {
 		this.numero = numero;
 	}
+	public Cuota(int numero,double cuota) {
+		this.numero = numero;
+		this.cuota = cuota;
+	}
 	
 	public int getNumero() {
 		return numero;
