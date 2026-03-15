@@ -58,5 +58,23 @@ public class Naipe {
 		
 		
 	}
+	public ArrayList<Carta> barajar(){
+		ArrayList<Carta> auxiliar=new ArrayList<Carta>();
+		int posicion;
+		for(int i=0;i<100;i++) {
+			posicion = Random.obtenerPosicion();
+			if(cartas.get(posicion).getEstado().equals("N")) {
+				auxiliar.add(cartas.get(posicion));
+				cartas.get(posicion).setEstado("C");
+			}
+		}
+		for(int p=0;p<cartas.size();p++) {
+			if(cartas.get(p).getEstado().equals("N")) {
+				auxiliar.add(cartas.get(p));
+				cartas.get(p).setEstado("C");
+			}
+		}
+		return auxiliar;
+	}
 	
 }
